@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
     height: 1rem;
@@ -93,7 +94,7 @@ section{
     left: 5%;
 }
 
-.parallax-home img#moon{
+.parallax-home img#moon , .about #desert-moon{
     mix-blend-mode:screen;
 }
 
@@ -115,7 +116,7 @@ section{
 
 .about .info-box{
     position: absolute;
-    top: 0%;
+    top: -4%;
     left: 10%;
     width: 50%;
     z-index: 13;
@@ -198,4 +199,92 @@ section{
     display: block;
     width: 60%;
     margin: auto;
+}
+.price-name span{
+    color: #04cf37;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#progress{
+    position: fixed;
+    background: #194eb9;
+    z-index: 12;
+    width:  50px;
+    bottom: 20px;
+    right: 10px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    place-items: center;
+    cursor: pointer;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #000;
+
+}
+
+@media (max-width:600px) {
+    header{
+        width: 100%;
+        padding: 25px 2px;
+    }
+    .logo{
+        font-size: 18px;
+    }
+    .navlist li{
+        margin-left: 0px;
+    }
+    .navlist a{
+        font-size: 12px;
+
+    }
+    section{
+        min-height: 30vh;
+        margin-top: 69px;
+    }
+    .parallax-home{
+        display: block;
+        height: 100%;
+    }
+    #moon{
+        top: 0px;
+    }
+    .parallax-home #text{
+        top: 88%;
+        font-size: 38px;
+    }
+    .about .info-box{
+        width: 100%;
+        left: 0;
+    }
+    .about .info-box h2{
+        font-size: 18px;
+    }
+    .about .info-box p {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+    .btn{
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .products{
+        margin-top: 20px;
+    }
+    .products h2{
+        padding: 2rem 0 3rem 0;
+    }
+    .product-card{
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
 }
